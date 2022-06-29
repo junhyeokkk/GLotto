@@ -7,6 +7,7 @@ public class jp {
 	System.out.println("�谡 ���Ŀ�");
 	System.out.println("�谡 ���");
 	System.out.println("abcd");
+	// ssss
 	
 	
 	System.out.println("asdfasdf");
