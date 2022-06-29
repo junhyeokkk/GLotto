@@ -9,5 +9,7 @@ public class jp {
 	//123123123123123
 	System.out.println("asdfasdf");
 	System.out.println("한글은왜 ㅅㅂ");
+	
+	System.out.println("줫같네");
 	}
 }
