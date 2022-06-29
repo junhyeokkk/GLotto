@@ -1,6 +1,8 @@
 package Wook;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -26,6 +28,7 @@ public class Dialog {
 				}
 			}
 		});
+		
 	}
 
 	/**
@@ -267,6 +270,13 @@ public class Dialog {
 		JButton btnBuy = new JButton("확인");
 		btnBuy.setBounds(436, 415, 106, 35);
 		panel.add(btnBuy);
+		
+		btnCancel.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			dialog.setVisible(false);	
+			}
+		});
 	}
 
 }
