@@ -19,6 +19,21 @@ public class Login {
 	private JTextField IDtext;
 	private JPasswordField passwordField;
 
+	
+	/**
+	 * @return the frame
+	 */
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	/**
+	 * @param frame the frame to set
+	 */
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
+
 	/**
 	 * Launch the application.
 	 */

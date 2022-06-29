@@ -56,13 +56,13 @@ public class Main {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.PINK);
+		frame.getContentPane().setBackground(Color.WHITE);
 		frame.setBounds(100, 100, 451, 610);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.PINK);
+		panel.setBackground(Color.WHITE);
 		panel.setBounds(12, 10, 411, 133);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -73,7 +73,7 @@ public class Main {
 		panel.add(lblNewLabel);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.PINK);
+		panel_1.setBackground(Color.WHITE);
 		panel_1.setBounds(44, 153, 351, 418);
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
@@ -85,7 +85,7 @@ public class Main {
 		
 		JButton btnMypage = new JButton("MyPage");
 		btnMypage.setBackground(Color.WHITE);
-		btnMypage.setBounds(94, 94, 168, 57);
+		btnMypage.setBounds(94, 109, 168, 57);
 		panel_1.add(btnMypage);
 		
 		btnMypage.addActionListener(new ActionListener() {
@@ -98,21 +98,31 @@ public class Main {
 			
 		});
 		
-
-		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.setBackground(Color.WHITE);
-		btnLogout.setBounds(94, 183, 168, 57);
+		btnLogout.setBounds(94, 211, 168, 57);
 		panel_1.add(btnLogout);
 		
-		JButton btnNewButton_3 = new JButton("종료");
-		btnNewButton_3.setBackground(Color.WHITE);
-		btnNewButton_3.setBounds(94, 271, 168, 57);
-		panel_1.add(btnNewButton_3);
+		btnLogout.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Login l = new Login();
+				l.getFrame().setVisible(true);
+				frame.dispose();
+			}
+			
+		});
 		
-		JButton btnNewButton_3_1 = new JButton("뒤로가기");
-		btnNewButton_3_1.setBackground(Color.WHITE);
-		btnNewButton_3_1.setBounds(94, 351, 168, 57);
-		panel_1.add(btnNewButton_3_1);
+		JButton Exitbtn = new JButton("종료");
+		Exitbtn.setBackground(Color.WHITE);
+		Exitbtn.setBounds(94, 315, 168, 57);
+		panel_1.add(Exitbtn);
+		
+		Exitbtn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				 frame.setVisible(false);
+			}
+		});
 	}
 }
