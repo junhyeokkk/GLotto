@@ -109,11 +109,11 @@ public class Login {
 		SUBtn.setBounds(252, 5, 92, 23);
 		panel_3.add(SUBtn);
 		
-		LoginBtn.addActionListener(new ActionListener() {
+		SUBtn.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new SignUp();
+				new SignUp().setVisible(true);
 			}
 			
 		});

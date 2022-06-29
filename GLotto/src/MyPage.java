@@ -20,6 +20,20 @@ public class MyPage {
 	private JTextField MPTEL;
 
 	/**
+	 * @return the frame
+	 */
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	/**
+	 * @param frame the frame to set
+	 */
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
+
+	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
@@ -149,26 +163,39 @@ public class MyPage {
 		InputBtn.setBounds(0, 324, 84, 23);
 		panel_1.add(InputBtn);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("D:\\GLotto\\GLotto\\Image\\lotto.png"));
-		lblNewLabel_2.setBounds(2, 383, 407, 89);
-		panel_1.add(lblNewLabel_2);
-		
 		InputBtn.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new Dialog();
+				
 			}
 		});
+		
 		
 		JButton button = new JButton("수정");
 		button.setBackground(Color.WHITE);
 		button.setBounds(54, 587, 122, 42);
 		frame.getContentPane().add(button);
 		
-		JButton button_1 = new JButton("초기화면");
-		button_1.setBackground(Color.WHITE);
-		button_1.setBounds(261, 587, 122, 42);
-		frame.getContentPane().add(button_1);
+		JButton MPbtn = new JButton("초기화면");
+		MPbtn.setBackground(Color.WHITE);
+		MPbtn.setBounds(261, 587, 122, 42);
+		frame.getContentPane().add(MPbtn);
+		
+		MPbtn.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Main a = new Main();
+				a.getFrame().setVisible(true);
+				frame.dispose();
+			}
+		});
 	}
+
+
+
+
+
+
+
+
 }

@@ -1,4 +1,6 @@
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,6 +12,21 @@ import javax.swing.JButton;
 public class Main {
 
 	private JFrame frame;
+	
+
+	/**
+	 * @return the frame
+	 */
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	/**
+	 * @param frame the frame to set
+	 */
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
 
 	/**
 	 * Launch the application.
@@ -39,13 +56,13 @@ public class Main {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.LIGHT_GRAY);
+		frame.getContentPane().setBackground(Color.PINK);
 		frame.setBounds(100, 100, 451, 610);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.LIGHT_GRAY);
+		panel.setBackground(Color.PINK);
 		panel.setBounds(12, 10, 411, 133);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -56,7 +73,7 @@ public class Main {
 		panel.add(lblNewLabel);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(Color.LIGHT_GRAY);
+		panel_1.setBackground(Color.PINK);
 		panel_1.setBounds(44, 153, 351, 418);
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
@@ -70,6 +87,18 @@ public class Main {
 		btnMypage.setBackground(Color.WHITE);
 		btnMypage.setBounds(94, 94, 168, 57);
 		panel_1.add(btnMypage);
+		
+		btnMypage.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				MyPage m = new MyPage();
+				m.getFrame().setVisible(true);
+				frame.dispose();
+			}
+			
+		});
+		
+
 		
 		JButton btnLogout = new JButton("Logout");
 		btnLogout.setBackground(Color.WHITE);

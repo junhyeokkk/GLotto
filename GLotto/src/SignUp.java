@@ -317,7 +317,8 @@ public class SignUp extends JFrame {
 	}
 
 	public static void main(String[] args) {
+		
 		new SignUp().setVisible(true);
-
+		
 	}
 }
