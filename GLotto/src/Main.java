@@ -12,6 +12,21 @@ import javax.swing.JButton;
 public class Main {
 
 	private JFrame frame;
+	
+
+	/**
+	 * @return the frame
+	 */
+	public JFrame getFrame() {
+		return frame;
+	}
+
+	/**
+	 * @param frame the frame to set
+	 */
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
 
 	/**
 	 * Launch the application.

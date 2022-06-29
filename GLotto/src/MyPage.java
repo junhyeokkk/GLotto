@@ -171,16 +171,24 @@ public class MyPage {
 		});
 		
 		
-		
 		JButton button = new JButton("수정");
 		button.setBackground(Color.WHITE);
 		button.setBounds(54, 587, 122, 42);
 		frame.getContentPane().add(button);
 		
-		JButton button_1 = new JButton("초기화면");
-		button_1.setBackground(Color.WHITE);
-		button_1.setBounds(261, 587, 122, 42);
-		frame.getContentPane().add(button_1);
+		JButton MPbtn = new JButton("초기화면");
+		MPbtn.setBackground(Color.WHITE);
+		MPbtn.setBounds(261, 587, 122, 42);
+		frame.getContentPane().add(MPbtn);
+		
+		MPbtn.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Main a = new Main();
+				a.getFrame().setVisible(true);
+				frame.dispose();
+			}
+		});
 	}
 
 
