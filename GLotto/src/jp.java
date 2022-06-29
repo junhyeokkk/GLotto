@@ -23,5 +23,6 @@ public class jp {
 	System.out.println("수정");
 	System.out.println("수정");
 	System.out.println("수정");
+	System.out.println("수정2");
 	}
 }
