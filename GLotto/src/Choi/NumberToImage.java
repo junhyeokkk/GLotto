@@ -22,7 +22,7 @@ public class NumberToImage extends JFrame {
 		URL[] urlAll = new URL[45];
 
 		for (int i = 0; i < urlAll.length; i++) {
-			urlAll[i] = Lotto.class.getClassLoader().getResource("images/" + (i + 1) + ".png");
+			urlAll[i] = Lotto.class.getClassLoader().getResource("resource/images/" + (i + 1) + ".png");
 			ImageIcon image = new ImageIcon(kit.getImage(urlAll[i]).getScaledInstance(40, 40, Image.SCALE_SMOOTH));
 			numberImage.put(i, image);
 		}
