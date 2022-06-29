@@ -18,5 +18,6 @@ public class jp {
 	
 	
 	System.err.println("이제 될거같은데");
+	System.err.println("이제 될거같은데");
 	}
 }
