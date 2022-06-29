@@ -20,19 +20,17 @@ public class NumberToImage extends JFrame {
 		Toolkit kit = Toolkit.getDefaultToolkit();
 
 		URL[] urlAll = new URL[45];
-		
+
 		for (int i = 0; i < urlAll.length; i++) {
 			urlAll[i] = Lotto.class.getClassLoader().getResource("images/" + (i + 1) + ".png");
-			ImageIcon image = new ImageIcon(kit.getImage(urlAll[i]).getScaledInstance(40, 40, 			Image.SCALE_SMOOTH));
+			ImageIcon image = new ImageIcon(kit.getImage(urlAll[i]).getScaledInstance(40, 40, Image.SCALE_SMOOTH));
 			numberImage.put(i, image);
 		}
-		
-		
-		
+
 		// urlAll[0] = Lotto.class.getClassLoader().getResource(imagePng);
 		// 숫자 -> 이미지 , 숫자값 받으면 이미지 가져오는 과정 시작//
 		// 이미지를 반복해서 불러올수 있게 하는 방법은 뭘까....?
-		
+
 // 		String imagePng = "images/" + 1 + ".png";
 //		URL url = Lotto.class.getClassLoader().getResource("images/1.png");
 //		ImageIcon image = new ImageIcon(kit.getImage(url).getScaledInstance(40, 40, Image.SCALE_SMOOTH));

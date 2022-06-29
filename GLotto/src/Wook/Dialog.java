@@ -2,11 +2,11 @@ package Wook;
 
 import java.awt.EventQueue;
 
-import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JLabel;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.SwingConstants;
+import javax.swing.JLabel;
+import javax.swing.JButton;
 
 public class Dialog {
 
@@ -41,7 +41,7 @@ public class Dialog {
 	private void initialize() {
 		dialog = new JDialog();
 		dialog.setBounds(100, 100, 573, 499);
-		dialog.setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
+		dialog.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 		dialog.getContentPane().setLayout(null);
 
 		JPanel panel = new JPanel();
@@ -51,7 +51,7 @@ public class Dialog {
 
 //		---------- Title ----------
 
-		JLabel lblTitle = new JLabel("인생역전 할 번호 6개");
+		JLabel lblTitle = new JLabel("New label");
 		lblTitle.setBounds(12, 10, 296, 59);
 		panel.add(lblTitle);
 
@@ -63,6 +63,10 @@ public class Dialog {
 		panel_1.setLayout(null);
 
 //		---------- Lotto Number ----------
+		
+//		JLabel[] lblAll = new JLabel[45];
+		 
+		
 		
 		JLabel lblNum_1 = new JLabel("1");
 		lblNum_1.setBounds(12, 10, 40, 40);
@@ -247,12 +251,10 @@ public class Dialog {
 //		---------- Sub Label ----------
 		
 		JLabel btnClear = new JLabel("초기화");
-		btnClear.setHorizontalAlignment(SwingConstants.CENTER);
 		btnClear.setBounds(324, 266, 81, 30);
 		panel_1.add(btnClear);
 
 		JLabel btnRandom = new JLabel("랜덤");
-		btnRandom.setHorizontalAlignment(SwingConstants.CENTER);
 		btnRandom.setBounds(428, 266, 81, 30);
 		panel_1.add(btnRandom);
 
