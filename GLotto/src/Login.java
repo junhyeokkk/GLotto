@@ -11,12 +11,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.JPasswordField;
 
 public class Login {
 
 	private JFrame frame;
 	private JTextField IDtext;
-	private JTextField PWtext;
+	private JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -84,10 +85,9 @@ public class Login {
 		lblNewLabel_2_1.setBounds(12, 37, 76, 18);
 		panel_2.add(lblNewLabel_2_1);
 		
-		PWtext = new JTextField();
-		PWtext.setColumns(20);
-		PWtext.setBounds(98, 36, 226, 21);
-		panel_2.add(PWtext);
+		passwordField = new JPasswordField();
+		passwordField.setBounds(97, 36, 227, 21);
+		panel_2.add(passwordField);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBackground(Color.CYAN);
