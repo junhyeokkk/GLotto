@@ -1,17 +1,29 @@
 package Wook;
 
 import java.awt.EventQueue;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import Choi.Lotto;
+import Choi.NumberToImage;
+import Choi.lottoChoice;
 
 public class Dialog {
-
+	Lotto lotto = new Lotto();
+	lottoChoice choice = new lottoChoice();
+	NumberToImage toImage = new NumberToImage();
+//	Main main = new Main();
+	
+	HashMap numberImage = new HashMap();
 	private JDialog dialog;
 
 	/**
@@ -66,9 +78,13 @@ public class Dialog {
 		panel_1.setLayout(null);
 
 //		---------- Lotto Number ----------
+		Toolkit kit = Toolkit.getDefaultToolkit();
+		JLabel[] lblAll = new JLabel[45];
 		
-//		JLabel[] lblAll = new JLabel[45];
-		 
+		for (int i = 0; i < lblAll.length; i++) {
+			
+		}
+		
 		
 		
 		JLabel lblNum_1 = new JLabel("1");
