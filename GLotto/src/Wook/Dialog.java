@@ -2,11 +2,11 @@ package Wook;
 
 import java.awt.EventQueue;
 
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JLabel;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 public class Dialog {
 
@@ -51,9 +51,9 @@ public class Dialog {
 
 //		---------- Title ----------
 
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setBounds(12, 10, 296, 59);
-		panel.add(lblNewLabel);
+		JLabel lblTitle = new JLabel("인생역전 할 번호 6개");
+		lblTitle.setBounds(12, 10, 296, 59);
+		panel.add(lblTitle);
 
 //		---------- MainPanel ----------
 
@@ -247,10 +247,12 @@ public class Dialog {
 //		---------- Sub Label ----------
 		
 		JLabel btnClear = new JLabel("초기화");
+		btnClear.setHorizontalAlignment(SwingConstants.CENTER);
 		btnClear.setBounds(324, 266, 81, 30);
 		panel_1.add(btnClear);
 
 		JLabel btnRandom = new JLabel("랜덤");
+		btnRandom.setHorizontalAlignment(SwingConstants.CENTER);
 		btnRandom.setBounds(428, 266, 81, 30);
 		panel_1.add(btnRandom);
 

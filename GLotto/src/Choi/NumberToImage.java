@@ -18,6 +18,8 @@ public class NumberToImage extends JFrame {
 		
 		Toolkit kit = Toolkit.getDefaultToolkit();
 		
+		
+		
 		URL[] urlAll = new URL[45];
 		urlAll[0] = Lotto.class.getClassLoader().getResource("images/1.png");
 		// 숫자 -> 이미지 , 숫자값 받으면 이미지 가져오는 과정 시작//
