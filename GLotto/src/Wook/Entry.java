@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 
-public class Main {
+public class Entry {
 	
 	private JFrame frame;
 	
@@ -24,7 +24,7 @@ public class Main {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Main window = new Main();
+					Entry window = new Entry();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +36,7 @@ public class Main {
 	/**
 	 * Create the application.
 	 */
-	public Main() {
+	public Entry() {
 		initialize();
 	}
 
