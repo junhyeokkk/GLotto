@@ -15,6 +15,8 @@ public class jp {
 	
 	System.out.println("이제 제대로 되냐?");
 	// ㅁㄴㅇㄹㅁㄴㅇㄹ
-
+	
+	
+	System.err.println("이제 될거같은데");
 	}
 }
