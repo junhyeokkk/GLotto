@@ -57,9 +57,9 @@ public class Login {
 		panel_1.setBounds(10, 50, 414, 243);
 		frame.getContentPane().add(panel_1);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Administrator\\Desktop\\\uB85C\uB610\uC774\uBBF8\uC9C0.png"));
-		panel_1.add(lblNewLabel_1);
+		JLabel Imagelbl = new JLabel("");
+		Imagelbl.setIcon(new ImageIcon("D:\\GLotto\\GLotto\\Image\\로또이미지.png"));
+		panel_1.add(Imagelbl);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(Color.CYAN);
