@@ -4,6 +4,7 @@ public class jp {
 	
 	System.out.println("한글 안깨지는뎅");
 	System.out.println("abcd");
+	// ssss
 	
 	
 	System.out.println("asdfasdf");
