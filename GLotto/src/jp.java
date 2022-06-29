@@ -12,5 +12,8 @@ public class jp {
 	System.out.println("한글은왜 ㅅㅂ");
 	
 	System.out.println("줫같네");
+	
+	System.out.println("이제 제대로 되냐?");
+
 	}
 }
