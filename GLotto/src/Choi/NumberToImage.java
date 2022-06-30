@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 
 //// 숫자를 입력하면 숫자와 같은 이미지가 나오는 클래스를 만들었다.
 public class NumberToImage extends JFrame {
-	HashMap numberImage = new HashMap();
+	public HashMap numberImage = new HashMap();
 
 	public NumberToImage() {
 		JPanel pnl = new JPanel();

@@ -3,6 +3,7 @@ package Wook;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.util.HashMap;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,7 +17,7 @@ import javax.swing.SwingConstants;
 public class Entry {
 	
 	private JFrame frame;
-	
+	HashMap numberImage = new HashMap();
 	/**
 	 * Launch the application.
 	 */

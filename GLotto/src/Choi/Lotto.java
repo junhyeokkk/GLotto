@@ -16,7 +16,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> branch 'master' of https://github.com/junhyeokkk/GLotto.git
 class LottoNumber {
 	// 오름차순 랜덤 숫자 7개 배열을 반환하는 메소드를 만들었다.
 	List<Integer> lottoList;
