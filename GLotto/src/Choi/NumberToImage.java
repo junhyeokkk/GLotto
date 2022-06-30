@@ -95,7 +95,7 @@ public class NumberToImage extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new NumberToImage().setVisible(true);
+		new NumberToImages().setVisible(true);
 	}
 
 }

@@ -10,7 +10,7 @@ public class lottoChoice extends JFrame {
 	public lottoChoice() {
 		JPanel pnl = new JPanel();
 		JLabel titleLabel = new JLabel("번호입력");
-		NumberToImage numbersImage = new NumberToImage();
+		NumberToImages numbersImage = new NumberToImages();
 		
 		// 45개 객체 만들려다가 너무 오래 걸려서 배열로 만들었다.
 		JLabel[] lblAll = new JLabel[45];
