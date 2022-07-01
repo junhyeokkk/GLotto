@@ -16,19 +16,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-<<<<<<< HEAD
+import com.sun.javafx.collections.MappingChange.Map;
 
-=======
->>>>>>> branch 'master' of https://github.com/junhyeokkk/GLotto.git
 class LottoNumber {
 	// 오름차순 랜덤 숫자 7개 배열을 반환하는 메소드를 만들었다.
-	List<Integer> lottoList;
+	List<Integer> lottoList;		// 당첨번호
 	public LottoNumber() {
 		Set<Integer> lottoNumber = new HashSet<Integer>();
 		
 		// 7개의 중복이 아닌 랜덤 수를 만들었다.
 		while (lottoNumber.size() < 7) {
-			int random = (int) (Math.random()*44 + 1);
+			int random = (int) (Math.random()*45 + 1);
 			lottoNumber.add(random);
 		}
 		//랜덤 수 7개 뽑았다.
@@ -51,18 +49,18 @@ public class Lotto extends JFrame {
 	//----------------------------1등 랜덤 숫자 출력------------------------------------------------//
 	LottoNumber lN = new LottoNumber();
 
-	System.out.println("랜덤수" + lN.lottoList.get(0));
-	System.out.println("랜덤수" + lN.lottoList.get(1));
+	System.out.println("랜덤수" + (lN.lottoList.get(0)));
+	System.out.println("랜덤수" + (lN.lottoList.get(1)));
 	JPanel pnl = new JPanel();
 	Toolkit kit = Toolkit.getDefaultToolkit();
-//	HashMap map = new HashMap();
-	NumberToImages numberToImages = new NumberToImages();	// 랜덤 45개 이미지 가지는 클래스. 필드로 HashMap numberImage을 가진다.
+	HashMap map = new HashMap();
+	NumberToImages numbersImage = new NumberToImages();	// 랜덤 45개 이미지 가지는 클래스. 필드로 HashMap numberImage을 가진다.
 	
 	//	image == map.get("a"); 처음에 JLabel의 생성자에 ImageIcon을 Value로 가지는 map.get("a")를 넣었더니 JLabel은 Object를 
 	// 가지는 생성자는 없다면서 오류가 났다. 그래서 map.get("a")를 형변환 (ImageIcon)map.get("a") 이걸로 변환했더니 적용이 되었다.
 	JLabel[] lblAll = new JLabel[7];
 	for (int i = 0; i < lblAll.length; i++) {
-		lblAll[i] = new JLabel((ImageIcon)numberToImages.numberImage.get(lN.lottoList.get(i)));
+		lblAll[i] = new JLabel((ImageIcon)numbersImage.numberImage.get(lN.lottoList.get(i)));
 		pnl.add(lblAll[i]);
 	}
 	// 배열 반복으로 가능하다.....!
