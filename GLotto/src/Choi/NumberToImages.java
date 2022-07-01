@@ -20,17 +20,19 @@ public class NumberToImages extends JFrame {
 		Toolkit kit = Toolkit.getDefaultToolkit();
 
 		URL[] urlAll = new URL[45];
-
+		
 		for (int i = 0; i < urlAll.length; i++) {
-			urlAll[i] = Lotto.class.getClassLoader().getResource("resource/images/" + (i + 1) + ".png");
+			urlAll[i] = NumberToImages.class.getClassLoader().getResource("images/" + (i + 1) + ".png");
 			ImageIcon image = new ImageIcon(kit.getImage(urlAll[i]).getScaledInstance(40, 40, Image.SCALE_SMOOTH));
-			numberImage.put(i, image);
+			numberImage.put((i + 1), image);	// 1 ~ 45 까지 숫자를 이미지에 대응해서 넣기 위함.
 		}
-
+		
+		
+		
 		// urlAll[0] = Lotto.class.getClassLoader().getResource(imagePng);
 		// 숫자 -> 이미지 , 숫자값 받으면 이미지 가져오는 과정 시작//
 		// 이미지를 반복해서 불러올수 있게 하는 방법은 뭘까....?
-
+		
 // 		String imagePng = "images/" + 1 + ".png";
 //		URL url = Lotto.class.getClassLoader().getResource("images/1.png");
 //		ImageIcon image = new ImageIcon(kit.getImage(url).getScaledInstance(40, 40, Image.SCALE_SMOOTH));
@@ -95,7 +97,7 @@ public class NumberToImages extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new NumberToImage().setVisible(true);
+		new NumberToImages().setVisible(true);
 	}
 
 }
