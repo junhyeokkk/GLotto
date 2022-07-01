@@ -1,5 +1,6 @@
 package Choi;
 
+// 랜덤숫자는 한번더 눌렀을때 취소가 안된다. 왜냐면 랜ㄷ
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,6 +27,10 @@ public class lottoChoice extends JFrame {
 	List<Integer> UserGetLottoNumbers = new ArrayList<Integer>(choiceLottoNumbers);	// 유저가 선택 or 자동으로 선택한 숫자들 리스트
 	JPanel pnl;
 	JPanel selectPnl;
+	
+	public List<Integer> getUserGetLottoNumbers() {
+		return UserGetLottoNumbers;
+	}
 
 	public JPanel getPnl() {
 		return pnl;
@@ -34,7 +39,7 @@ public class lottoChoice extends JFrame {
 	public JPanel getSelectPnl() {
 		return selectPnl;
 	}
-
+	
 	public lottoChoice() {
 		super("GridLayout");
 		setLayout(new GridLayout(3,3));
@@ -67,9 +72,8 @@ public class lottoChoice extends JFrame {
 					if (choiceLottoNumbers.size() == 0) {	// Reset했을때 clickcount는 리셋이 안되어서 리셋하는 조건문을 만들었다.
 						clickcount = 0;
 					}
-					if (choiceLottoNumbers.size() < 7 && UserGetLottoNumbers.size() < 6) {	//	6개 다찼을때는 조건문이 바로 나가져서 Label 취소가 안된다. 그래서 size를 6에서 7로 바꾸었다. 번호 추가는 6개만 되게 했다.
+					if (choiceLottoNumbers.size() < 7 && UserGetLottoNumbers.size() < 7) {	//	6개 다찼을때는 조건문이 바로 나가져서 Label 취소가 안된다. 그래서 size를 6에서 7로 바꾸었다. 번호 추가는 6개만 되게 했다.
 														// UserGetLottoNumber < 6 한 이유는  자동버튼으로 번호 다 채웠는데 숫자 클릭하면 모든 값이 초기화 되고 선택한 값이 들어갔기 때문이다. 
-
 						for (int i = 0; i < lblAll.length; i++) {
 							
 							if (clickLabel.equals(lblAll[i])) { // 클릭 이벤트가 발생한 객체의 source와 label이미지객체의 source가 같으면 click 횟수가 증가한다. 나중에 삭제할때 쓸려고
@@ -187,7 +191,8 @@ public class lottoChoice extends JFrame {
 				if (UserGetLottoNumbers.size() > 0) {
 	//				choiceLottoNumbers.remove(choiceLottoNumbers);
 	//				choiceLottoNumbers.remove(choiceLottoNumbers);
-					for (int i = 0; i < 6; i++) {	// clear하고 난 뒤 이미지를 지우면 데이터 값이 없으므로 index가 없어 index 오류가 나타난다.
+					
+					for (int i = 0; i < UserGetLottoNumbers.size(); i++) {	// clear하고 난 뒤 이미지를 지우면 데이터 값이 없으므로 index가 없어 index 오류가 나타난다.
 						lblAll[UserGetLottoNumbers.get(i) - 1].setIcon((ImageIcon) numberToImage.numberImage.get(UserGetLottoNumbers.get(i)));
 						UserNumberImage[i].setIcon(null);	// URL에서 숫자 0 이 이미지 1이다. 즉 숫자와 이미지가 완전히 대응되는게 아닌 이미지가 숫자 + 1의 값이 되었다.
 					}
