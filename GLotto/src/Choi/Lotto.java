@@ -41,7 +41,15 @@ class LottoNumber {
 }
 
 public class Lotto extends JFrame {
+	public JPanel pnl;
+	
+	public JPanel getPnl() {
+		return pnl;
+	}
+
+
 	public Lotto() {
+		pnl = new JPanel();
 	//----------------------------제목------------------------------------------------//
 		JLabel title = new JLabel("출력 확인");
 	//----------------------------제목 끝------------------------------------------------//
@@ -51,7 +59,6 @@ public class Lotto extends JFrame {
 
 	System.out.println("랜덤수" + (lN.lottoList.get(0)));
 	System.out.println("랜덤수" + (lN.lottoList.get(1)));
-	JPanel pnl = new JPanel();
 	Toolkit kit = Toolkit.getDefaultToolkit();
 	HashMap map = new HashMap();
 	NumberToImages numbersImage = new NumberToImages();	// 랜덤 45개 이미지 가지는 클래스. 필드로 HashMap numberImage을 가진다.
@@ -95,6 +102,7 @@ public class Lotto extends JFrame {
 	
 	
 	}
+
 	
 	public static void main(String[] args) {
 		new Lotto().setVisible(true);
@@ -102,3 +110,4 @@ public class Lotto extends JFrame {
         
 	}
 }
+
