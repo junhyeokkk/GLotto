@@ -19,7 +19,7 @@ public class NumberToImages extends JFrame {
 
 		Toolkit kit = Toolkit.getDefaultToolkit();
 
-		URL[] urlAll = new URL[45];
+		URL[] urlAll = new URL[90];
 		
 		for (int i = 0; i < urlAll.length; i++) {
 			urlAll[i] = NumberToImages.class.getClassLoader().getResource("resource/images/" + (i + 1) + ".png");
