@@ -19,10 +19,10 @@ public class NumberToImages extends JFrame {
 
 		Toolkit kit = Toolkit.getDefaultToolkit();
 
-		URL[] urlAll = new URL[90];
+		URL[] urlAll = new URL[135];
 		
 		for (int i = 0; i < urlAll.length; i++) {
-			urlAll[i] = NumberToImages.class.getClassLoader().getResource("resource/images/" + (i + 1) + ".png");
+			urlAll[i] = NumberToImages.class.getClassLoader().getResource("images/" + (i + 1) + ".png");
 			ImageIcon image = new ImageIcon(kit.getImage(urlAll[i]).getScaledInstance(40, 40, Image.SCALE_SMOOTH));
 			numberImage.put((i + 1), image);	// 1 ~ 45 까지 숫자를 이미지에 대응해서 넣기 위함.
 		}
