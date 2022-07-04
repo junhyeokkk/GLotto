@@ -11,14 +11,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class MyPage {
 
 	private JFrame frame;
-	private JTextField MPID;
 	private JPasswordField MPPW;
-	private JTextField MPTEL;
-
+	Login l2;
+	
+	Main l = new Main();
 	/**
 	 * @return the frame
 	 */
@@ -86,51 +87,52 @@ public class MyPage {
 		lblNewLabel_1.setBounds(22, 10, 62, 80);
 		panel_1.add(lblNewLabel_1);
 		
-		JLabel namelbl = new JLabel("New label");
-		namelbl.setBounds(110, 20, 182, 57);
-		panel_1.add(namelbl);
+		JLabel Namelbl = new JLabel("New label");
+		Namelbl.setHorizontalAlignment(SwingConstants.CENTER);
+		Namelbl.setFont(new Font("굴림", Font.BOLD, 25));
+		Namelbl.setText(l2.m2.getName());
+		Namelbl.setBounds(110, 20, 182, 57);
+		
+
+		
+		panel_1.add(Namelbl);
+		
+		
+		
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
 		lblNewLabel_3.setBounds(325, 19, 84, 57);
 		panel_1.add(lblNewLabel_3);
 		
-		JLabel lblNewLabel_4 = new JLabel("ID");
-		lblNewLabel_4.setFont(new Font("굴림", Font.BOLD, 20));
-		lblNewLabel_4.setBounds(62, 141, 22, 26);
-		panel_1.add(lblNewLabel_4);
+		JLabel ID = new JLabel("ID");
+		ID.setFont(new Font("굴림", Font.BOLD, 20));
+		ID.setBounds(62, 141, 22, 26);
+		panel_1.add(ID);
 		
-		JLabel lblNewLabel_4_1 = new JLabel("Password");
-		lblNewLabel_4_1.setFont(new Font("굴림", Font.BOLD, 16));
-		lblNewLabel_4_1.setBounds(2, 192, 82, 24);
-		panel_1.add(lblNewLabel_4_1);
+		JLabel Password = new JLabel("Password");
+		Password.setFont(new Font("굴림", Font.BOLD, 16));
+		Password.setBounds(2, 192, 82, 24);
+		panel_1.add(Password);
 		
-		JLabel lblNewLabel_4_2 = new JLabel("Tel");
-		lblNewLabel_4_2.setFont(new Font("굴림", Font.BOLD, 20));
-		lblNewLabel_4_2.setBounds(51, 247, 33, 24);
-		panel_1.add(lblNewLabel_4_2);
+		JLabel Tel = new JLabel("Tel");
+		Tel.setFont(new Font("굴림", Font.BOLD, 20));
+		Tel.setBounds(51, 313, 33, 24);
+		panel_1.add(Tel);
 		
-		JLabel lblNewLabel_4_3 = new JLabel("LuckNum");
-		lblNewLabel_4_3.setFont(new Font("굴림", Font.BOLD, 18));
-		lblNewLabel_4_3.setBounds(2, 292, 82, 41);
-		panel_1.add(lblNewLabel_4_3);
-		
-		MPID = new JTextField();
-		MPID.setBounds(98, 141, 204, 21);
-		panel_1.add(MPID);
-		MPID.setColumns(10);
+		JLabel LuckNum = new JLabel("LuckNum");
+		LuckNum.setFont(new Font("굴림", Font.BOLD, 18));
+		LuckNum.setBounds(2, 371, 82, 41);
+		panel_1.add(LuckNum);
+	//	MPID.setText();
+	
 		
 		MPPW = new JPasswordField();
 		MPPW.setBounds(96, 195, 206, 21);
 		panel_1.add(MPPW);
 		
-		MPTEL = new JTextField();
-		MPTEL.setColumns(10);
-		MPTEL.setBounds(98, 251, 204, 21);
-		panel_1.add(MPTEL);
-		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(Color.WHITE);
-		panel_2.setBounds(96, 292, 302, 70);
+		panel_2.setBounds(96, 371, 302, 70);
 		panel_1.add(panel_2);
 		panel_2.setLayout(null);
 		
@@ -160,8 +162,45 @@ public class MyPage {
 		
 		JButton InputBtn = new JButton("입력하기");
 		InputBtn.setBackground(Color.WHITE);
-		InputBtn.setBounds(0, 324, 84, 23);
+		InputBtn.setBounds(0, 423, 84, 23);
 		panel_1.add(InputBtn);
+		
+		JLabel onum = new JLabel("New label");
+		onum.setHorizontalAlignment(SwingConstants.CENTER);
+		onum.setFont(new Font("굴림", Font.PLAIN, 15));
+		onum.setBounds(96, 313, 62, 24);
+		onum.setText(l2.m2.getFPhone());
+		panel_1.add(onum);
+		
+		
+		JLabel tnum = new JLabel("New label");
+		tnum.setHorizontalAlignment(SwingConstants.CENTER);
+		tnum.setFont(new Font("굴림", Font.PLAIN, 15));
+		tnum.setBounds(196, 313, 62, 24);
+		tnum.setText(l2.m2.getMPhone());
+		panel_1.add(tnum);
+		
+		JLabel fnum = new JLabel("New label");
+		fnum.setHorizontalAlignment(SwingConstants.CENTER);
+		fnum.setFont(new Font("굴림", Font.PLAIN, 15));
+		fnum.setBounds(294, 313, 62, 24);
+		fnum.setText(l2.m2.getLPhone());
+		panel_1.add(fnum);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon("D:\\GLotto\\GLotto\\Image\\하이픈.PNG"));
+		lblNewLabel_4.setBounds(158, 313, 32, 26);
+		panel_1.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_4_1 = new JLabel("New label");
+		lblNewLabel_4_1.setIcon(new ImageIcon("D:\\GLotto\\GLotto\\Image\\하이픈.PNG"));
+		lblNewLabel_4_1.setBounds(260, 313, 32, 26);
+		panel_1.add(lblNewLabel_4_1);
+		
+		JLabel IDlbl = new JLabel("New label");
+		IDlbl.setBounds(98, 141, 206, 26);
+		IDlbl.setText(l2.m2.getID());
+		panel_1.add(IDlbl);
 		
 		InputBtn.addActionListener(new ActionListener(){
 			@Override
@@ -185,7 +224,7 @@ public class MyPage {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Main a = new Main();
-				a.getFrame().setVisible(true);
+				a.setVisible(true);
 				frame.dispose();
 			}
 		});

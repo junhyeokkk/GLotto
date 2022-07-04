@@ -322,6 +322,8 @@ public class Dialog {
 				dialog.setVisible(false);
 			}
 		});
+		
+		
 	}
 
 }
