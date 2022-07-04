@@ -1,6 +1,6 @@
 package Choi;
 
-// 랜덤숫자는 한번더 눌렀을때 취소가 안된다. 왜냐면 랜ㄷ
+//랜덤숫자는 한번더 눌렀을때 취소가 안된다. 왜냐면 랜ㄷ
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,7 +27,18 @@ public class lottoChoice extends JFrame {
 	List<Integer> UserGetLottoNumbers = new ArrayList<Integer>(choiceLottoNumbers);	// 유저가 선택 or 자동으로 선택한 숫자들 리스트
 	JPanel pnl;
 	JPanel selectPnl;
-	
+	//////////연습버튼//////////
+	JButton practice;
+	private JButton checkButton;	// 확인버튼을 필드로 뺐다.  UserChoiceNumber에서  lottoChoice를 호출해서 lottoChoice의 
+									// 확인버튼이벤트 발생시 UserChoiceNumber의 userChoiceNumbersImages[]에 이미지가 추가되게 했다.
+									// *단 UserChoiceNumber에서 lottoChoice를 열어야지만 그 이벤트가 발생하게 했다. 그냥  lottoChoice버튼을 눌리면 이벤트 발생 안한다.
+	public JButton getPractice() {
+		return practice;
+	}
+	public JButton getCheckButton() {
+		return checkButton;
+	}
+	//////////연습버튼 끝/////////////
 	public List<Integer> getUserGetLottoNumbers() {
 		return UserGetLottoNumbers;
 	}
@@ -55,10 +66,10 @@ public class lottoChoice extends JFrame {
 		NumberToImages numberToImage = new NumberToImages();
 		JButton autoButton = new JButton("자동버튼");
 		JButton resetButton = new JButton("RESET");
-		JButton checkButton = new JButton("확인");
+		checkButton = new JButton("확인");
 
 		// 45개 객체 만들려다가 너무 오래 걸려서 배열로 만들었다.
-//////////////////////////////////////////////////// 로또 번호 정하는 파트//////////////////////////////////////////////
+////////////////////////////////////////////////////로또 번호 정하는 파트//////////////////////////////////////////////
 		JLabel[] lblAll = new JLabel[45];
 		for (int i = 0; i < lblAll.length; i++) {
 			lblAll[i] = new JLabel((ImageIcon) numberToImage.numberImage.get(i + 1));	// 0부터 44까지 되기때문에 +1을 했다.
@@ -167,6 +178,7 @@ public class lottoChoice extends JFrame {
 					for (int i = 0; i < 6; i++) {
 						UserNumberImage[i].setIcon((ImageIcon)numberToImage.numberImage.get(UserGetLottoNumbers.get(i)));		// URL에서 숫자 0 이 이미지 1이다. 즉 숫자와 이미지가 완전히 대응되는게 아닌 이미지가 숫자 + 1의 값이 되었다.
 					}
+					System.out.println("확인버튼 눌리면 최종적으로 나오는 숫자들은 = " + UserGetLottoNumbers);			// 수정한 내용
 				}  
 				else {
 					System.out.println("번호 입력하세요");
@@ -209,17 +221,21 @@ public class lottoChoice extends JFrame {
 		});
 		/////////////////////////////////////////// Reset버튼 만들기 마지막 ////////////////////////////////////////////////////
 
-
 		pnl.add(checkButton);
 		pnl.add(autoButton);
 		pnl.add(resetButton);
 		pnl.add(titleLabel);
+		
+		////////////////////연습버튼//////////////
+		practice = new JButton("연습버튼");
+		pnl.add(practice);
+		//////////////////// 연습버튼//////////////
 
 		add(selectPnl);
 		add(pnl);
 
 		setSize(1000, 1000);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 	}
 
 	public static void main(String[] args) {
